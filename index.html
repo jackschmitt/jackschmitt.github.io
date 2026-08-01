@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jack Schmitt — Computer Engineer</title>
+<meta name="description" content="Jack Schmitt — Computer Engineering student at the University of South Carolina, building at the intersection of embedded systems and AI.">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="site-header" id="site-header">
+  <div class="nav-wrap">
+    <a href="#home" class="logo" aria-label="Jack Schmitt — home">
+      <span class="logo-bracket">[</span>JS<span class="logo-bracket">]</span>
+    </a>
+
+    <nav class="primary-nav" id="primary-nav">
+      <a href="#home" class="nav-link" data-section="home">Home</a>
+      <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#resume" class="nav-link" data-section="resume">Resume</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HOME / HERO ============ -->
+  <section id="home" class="section hero">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <svg class="circuit-bg" aria-hidden="true" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+      <g fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M0 120 H260 V220 H520 V90 H900 V300"/>
+        <path d="M1200 500 H940 V400 H700 V620 H320 V500 H0"/>
+        <path d="M600 0 V160 H820 V340"/>
+        <path d="M180 800 V640 H420 V740 H680"/>
+      </g>
+      <g fill="currentColor">
+        <circle cx="260" cy="120" r="4"/>
+        <circle cx="520" cy="220" r="4"/>
+        <circle cx="900" cy="90" r="4"/>
+        <circle cx="940" cy="500" r="4"/>
+        <circle cx="700" cy="400" r="4"/>
+        <circle cx="320" cy="620" r="4"/>
+        <circle cx="820" cy="160" r="4"/>
+        <circle cx="420" cy="640" r="4"/>
+      </g>
+    </svg>
+
+    <div class="section-inner hero-grid">
+      <div class="hero-copy fade-in">
+        <p class="eyebrow">// 00 — HOME</p>
+        <h1 class="hero-name">Jack Schmitt</h1>
+        <p class="hero-tagline">Computer Engineer building at the intersection of embedded systems and AI.</p>
+        <p class="hero-intro">
+          Rising senior at the University of South Carolina, pursuing a B.S. in Computer Engineering
+          with an AI concentration and a minor in Electrical Engineering. I like working close to the
+          metal — from PCB traces and embedded firmware up through the data and AI systems that sit on top of them.
+        </p>
+
+        <div class="hero-links">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/jack-schmitt" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/jackschmitt" target="_blank" rel="noopener">GitHub</a>
+          <!-- Resume PDF should be placed at assets/resume/Jack_Schmitt_Resume.pdf -->
+          <a class="btn btn-ghost" href="assets/resume/Jack_Schmitt_Resume.pdf" download>Download Résumé</a>
+          <a class="btn btn-ghost" href="mailto:jackschmitt7@gmail.com">Email</a>
+        </div>
+      </div>
+
+      <div class="hero-panel fade-in" aria-hidden="false">
+        <div class="panel-header">
+          <span class="panel-dot"></span>
+          <span class="panel-title">SPEC — J.SCHMITT</span>
+        </div>
+        <dl class="panel-readout">
+          <div class="readout-row">
+            <dt>LOCATION</dt>
+            <dd>Atlanta, GA</dd>
+          </div>
+          <div class="readout-row">
+            <dt>PROGRAM</dt>
+            <dd>B.S. Computer Engineering — AI Concentration</dd>
+          </div>
+          <div class="readout-row">
+            <dt>MINOR</dt>
+            <dd>Electrical Engineering</dd>
+          </div>
+          <div class="readout-row">
+            <dt>INSTITUTION</dt>
+            <dd>University of South Carolina</dd>
+          </div>
+          <div class="readout-row">
+            <dt>GRAD DATE</dt>
+            <dd>May 2027</dd>
+          </div>
+          <div class="readout-row">
+            <dt>STATUS</dt>
+            <dd><span class="status-dot"></span>Open to Summer 2027 internships</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="section">
+    <div class="section-inner">
+      <p class="eyebrow fade-in">// 01 — EXPERIENCE</p>
+      <h2 class="section-title fade-in">Where I've Worked</h2>
+
+      <div class="timeline">
+
+        <article class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Infrastructure Operations Intern</h3>
+              <span class="timeline-date">May 2026 — Present</span>
+            </div>
+            <p class="timeline-org">Cox Enterprises · Sandy Springs, GA</p>
+            <ul class="timeline-bullets">
+              <li>Built PySpark/Python notebooks in Microsoft Fabric to transform data across lakehouses for enterprise reporting.</li>
+              <li>Developed REST APIs connecting internal Cox systems and databases, powering a Power BI cost dashboard across 4 data sources.</li>
+              <li>Used Git for version control while contributing to AI adoption initiatives (Copilot Studio) at a Fortune 500 company.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Systems Engineering Intern</h3>
+              <span class="timeline-date">May 2025 — Aug 2025</span>
+            </div>
+            <p class="timeline-org">Golden Code Development · Atlanta, GA</p>
+            <ul class="timeline-bullets">
+              <li>Sole intern for a private software consultancy specializing in system development.</li>
+              <li>Automated system setup and server security using Ansible, Docker, and iptables.</li>
+              <li>Deployed internal web systems with KVM virtualization.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>IT Intern</h3>
+              <span class="timeline-date">May 2025 — Aug 2025</span>
+            </div>
+            <p class="timeline-org">Strategic Benefits Advisors · Atlanta, GA</p>
+            <ul class="timeline-bullets">
+              <li>Upgraded seven conference rooms using Cisco Roombars and speaker systems.</li>
+              <li>Sourced and installed technology solutions for employee workstations.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Ambassador &amp; Social Media Intern</h3>
+              <span class="timeline-date">Sep 2024 — Present</span>
+            </div>
+            <p class="timeline-org">Molinaroli College of Engineering &amp; Computing · Columbia, SC</p>
+            <ul class="timeline-bullets">
+              <li>Produces professional-grade video content for the college.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <p class="eyebrow fade-in">// 02 — PROJECTS</p>
+      <h2 class="section-title fade-in">Things I've Built</h2>
+
+      <div class="project-grid">
+
+        <!-- PROJECT: Modern Telegraph Relay System -->
+        <article class="project-card fade-in">
+          <!-- TODO: replace .project-thumb div below with
+               <img src="assets/projects/telegraph-relay.jpg" alt="Modern Telegraph Relay System board"> -->
+          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+          <div class="project-body">
+            <h3 class="project-title">Modern Telegraph Relay System</h3>
+            <p class="project-stack">Nucleo-G474RE · C++ · Embedded Firmware</p>
+            <p class="project-desc">
+              Bidirectional signal relay bridging two isolated open-drain bus segments via NOR-gate
+              inversion and MOSFET gate drive. Iterated through 3 design revisions after diagnosing a
+              feedback-loop failure, landing on a store-and-forward architecture with a 700ms bail timeout.
+            </p>
+            <div class="project-specs">
+              <span class="spec-chip">320µs / hop overhead</span>
+              <span class="spec-chip">510ms end-to-end</span>
+              <span class="spec-chip">Rev. 3</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: PCB Temperature Sensor -->
+        <article class="project-card fade-in">
+          <!-- TODO: replace .project-thumb div below with
+               <img src="assets/projects/pcb-temp-sensor.jpg" alt="PCB temperature sensor board"> -->
+          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+          <div class="project-body">
+            <h3 class="project-title">PCB Temperature Sensor</h3>
+            <p class="project-stack">KiCAD · Thermistor Voltage Divider</p>
+            <p class="project-desc">
+              Designed a 2-layer PCB end-to-end in KiCAD — schematic, footprints, routing, Gerber export —
+              then soldered and validated the board against a temperature profile.
+            </p>
+            <div class="project-specs">
+              <span class="spec-chip">2-layer board</span>
+              <span class="spec-chip">Gerber export</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Theta Tau Chapter Portal -->
+        <article class="project-card fade-in">
+          <!-- TODO: replace .project-thumb div below with
+               <img src="assets/projects/theta-tau-portal.jpg" alt="Theta Tau chapter portal website"> -->
+          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+          <div class="project-body">
+            <h3 class="project-title">Theta Tau Chapter Portal</h3>
+            <p class="project-stack">Firebase · GitHub Pages · JavaScript</p>
+            <p class="project-desc">
+              Chapter website with a Firebase Realtime Database backend, role-based auth, and live voting.
+              Open source and actively maintained.
+            </p>
+            <div class="project-specs">
+              <span class="spec-chip">Open Source</span>
+              <span class="spec-chip">Actively Maintained</span>
+            </div>
+            <a class="project-link" href="https://github.thetatauzd.org" target="_blank" rel="noopener">github.thetatauzd.org &rarr;</a>
+          </div>
+        </article>
+
+        <!-- PROJECT: Autonomous Robot Navigation -->
+        <article class="project-card fade-in">
+          <!-- TODO: replace .project-thumb div below with
+               <img src="assets/projects/duckiebot-nav.jpg" alt="Duckiebot autonomous navigation"> -->
+          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+          <div class="project-body">
+            <h3 class="project-title">Autonomous Robot Navigation</h3>
+            <p class="project-stack">Duckiebot · ROS · Docker · PID Control</p>
+            <p class="project-desc">
+              Implemented PID control for autonomous robot navigation on a Duckiebot platform.
+            </p>
+            <div class="project-specs">
+              <span class="spec-chip">PID Control</span>
+              <span class="spec-chip">ROS</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Morse Code Relay Network -->
+        <article class="project-card fade-in">
+          <!-- TODO: replace .project-thumb div below with
+               <img src="assets/projects/morse-relay-network.jpg" alt="ESP32 Morse code relay network"> -->
+          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+          <div class="project-body">
+            <h3 class="project-title">Morse Code Relay Network</h3>
+            <p class="project-stack">4x ESP32</p>
+            <p class="project-desc">
+              Multi-node relay system across 4 ESP32 boards simulating long-distance signal repeater networks.
+            </p>
+            <div class="project-specs">
+              <span class="spec-chip">4 Nodes</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Self-Hosted NVR with AI Object Detection -->
+        <article class="project-card fade-in">
+          <!-- TODO: replace .project-thumb div below with
+               <img src="assets/projects/nvr-object-detection.jpg" alt="Self-hosted NVR dashboard"> -->
+          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+          <div class="project-body">
+            <div class="project-title-row">
+              <h3 class="project-title">Self-Hosted NVR with AI Object Detection</h3>
+              <span class="badge badge-progress">In Progress</span>
+            </div>
+            <p class="project-stack">Frigate · Docker · RTSP</p>
+            <p class="project-desc">
+              Self-hosted network video recorder integrating RTSP cameras with real-time AI object detection.
+            </p>
+            <div class="project-specs">
+              <span class="spec-chip">Real-Time Inference</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section">
+    <div class="section-inner">
+      <p class="eyebrow fade-in">// 03 — SKILLS</p>
+      <h2 class="section-title fade-in">Toolset</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-card fade-in">
+          <h3 class="skill-cat">Electrical</h3>
+          <div class="skill-tags">
+            <span>VHDL</span><span>Verilog</span><span>SystemVerilog</span><span>SPICE</span>
+            <span>LTSpice</span><span>Digital Logic</span><span>PCB Design (KiCAD)</span><span>Quartus</span>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <h3 class="skill-cat">Programming</h3>
+          <div class="skill-tags">
+            <span>C</span><span>C++</span><span>Java</span><span>Python</span><span>MATLAB</span>
+            <span>Assembly (MIPS/ARM/x86)</span><span>HTML</span><span>CSS</span><span>Bash</span>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <h3 class="skill-cat">Systems</h3>
+          <div class="skill-tags">
+            <span>Linux</span><span>Docker</span><span>Ansible</span><span>KVM/QEMU</span>
+            <span>Firebase</span><span>Git</span><span>ROS</span>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <h3 class="skill-cat">Tools</h3>
+          <div class="skill-tags">
+            <span>Copilot Studio</span><span>Power BI</span><span>Power Automate</span><span>Adobe Premiere</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESUME ============ -->
+  <section id="resume" class="section">
+    <div class="section-inner">
+      <p class="eyebrow fade-in">// 04 — RESUME</p>
+      <h2 class="section-title fade-in">Résumé</h2>
+
+      <!--
+        Drop your resume PDF at: assets/resume/Jack_Schmitt_Resume.pdf
+        The card below links/downloads that path directly — no other changes needed.
+      -->
+      <div class="resume-card fade-in">
+        <div class="resume-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <path d="M14 2v6h6"/>
+            <line x1="8" y1="13" x2="16" y2="13"/>
+            <line x1="8" y1="17" x2="16" y2="17"/>
+            <line x1="8" y1="9" x2="10" y2="9"/>
+          </svg>
+        </div>
+        <div class="resume-text">
+          <h3>Jack Schmitt — Résumé</h3>
+          <p>Full work history, coursework, and technical project detail in one PDF.</p>
+        </div>
+        <div class="resume-actions">
+          <a class="btn btn-primary" href="assets/resume/Jack_Schmitt_Resume.pdf" target="_blank" rel="noopener">View</a>
+          <a class="btn btn-ghost" href="assets/resume/Jack_Schmitt_Resume.pdf" download>Download</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <p class="eyebrow fade-in">// 05 — CONTACT</p>
+      <h2 class="section-title fade-in">Get In Touch</h2>
+      <p class="contact-lede fade-in">Open to Summer 2027 internships and interesting embedded/AI projects. Reach out any time.</p>
+
+      <div class="contact-grid fade-in">
+        <a class="contact-card" href="mailto:jackschmitt7@gmail.com">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">jackschmitt7@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/jack-schmitt" target="_blank" rel="noopener">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">in/jack-schmitt</span>
+        </a>
+        <a class="contact-card" href="https://github.com/jackschmitt" target="_blank" rel="noopener">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/jackschmitt</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <span>&copy; <span id="year"></span> Jack Schmitt</span>
+    <span class="footer-mono">Built from scratch · No framework</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
