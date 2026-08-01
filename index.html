@@ -25,6 +25,7 @@
 
     <nav class="primary-nav" id="primary-nav">
       <a href="#home" class="nav-link" data-section="home">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
       <a href="#experience" class="nav-link" data-section="experience">Experience</a>
       <a href="#projects" class="nav-link" data-section="projects">Projects</a>
       <a href="#skills" class="nav-link" data-section="skills">Skills</a>
@@ -74,7 +75,7 @@
         </p>
 
         <div class="hero-links">
-          <a class="btn btn-primary" href="https://www.linkedin.com/in/jack-schmitt" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/john-schmitty" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn btn-ghost" href="https://github.com/jackschmitt" target="_blank" rel="noopener">GitHub</a>
           <!-- Resume PDF should be placed at assets/resume/Jack_Schmitt_Resume.pdf -->
           <a class="btn btn-ghost" href="assets/resume/Jack_Schmitt_Resume.pdf" download>Download Résumé</a>
@@ -82,37 +83,89 @@
         </div>
       </div>
 
-      <div class="hero-panel fade-in" aria-hidden="false">
-        <div class="panel-header">
-          <span class="panel-dot"></span>
-          <span class="panel-title">SPEC — J.SCHMITT</span>
+      <div class="hero-aside fade-in">
+        <div class="photo-card">
+          <div class="photo-frame">
+            <!-- TODO: replace the placeholder div below with:
+                 <img src="assets/profile.jpg" alt="Jack Schmitt"> -->
+            <div class="photo-placeholder" aria-hidden="true"><span>IMG</span></div>
+            <span class="frame-corner corner-tl"></span>
+            <span class="frame-corner corner-tr"></span>
+            <span class="frame-corner corner-bl"></span>
+            <span class="frame-corner corner-br"></span>
+          </div>
+          <p class="photo-caption">FIG. 01 — J. SCHMITT</p>
         </div>
-        <dl class="panel-readout">
-          <div class="readout-row">
-            <dt>LOCATION</dt>
-            <dd>Atlanta, GA</dd>
+
+        <div class="hero-panel">
+          <div class="panel-header">
+            <span class="panel-dot"></span>
+            <span class="panel-title">SPEC — J.SCHMITT</span>
           </div>
-          <div class="readout-row">
-            <dt>PROGRAM</dt>
-            <dd>B.S. Computer Engineering — AI Concentration</dd>
+          <dl class="panel-readout">
+            <div class="readout-row">
+              <dt>LOCATION</dt>
+              <dd>Atlanta, GA</dd>
+            </div>
+            <div class="readout-row">
+              <dt>PROGRAM</dt>
+              <dd>B.S. Computer Engineering — AI Concentration</dd>
+            </div>
+            <div class="readout-row">
+              <dt>MINOR</dt>
+              <dd>Electrical Engineering</dd>
+            </div>
+            <div class="readout-row">
+              <dt>INSTITUTION</dt>
+              <dd>University of South Carolina</dd>
+            </div>
+            <div class="readout-row">
+              <dt>GRAD DATE</dt>
+              <dd>May 2027</dd>
+            </div>
+            <div class="readout-row">
+              <dt>STATUS</dt>
+              <dd><span class="status-dot"></span>Open to Summer 2027 internships</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <p class="eyebrow fade-in">// 01 — ABOUT</p>
+      <h2 class="section-title fade-in">About Me</h2>
+
+      <div class="about-grid">
+        <div class="about-copy fade-in">
+          <p>
+            I've spent the last few years splitting time between breadboards and code editors — sometimes
+            on the same project. At the University of South Carolina, I'm pursuing a Computer Engineering
+            degree with an AI concentration, which fits how I like to work: understand the hardware a
+            system runs on, then build the software that makes it useful.
+          </p>
+          <!-- TODO: personalize this paragraph — what got you into engineering, what you're building
+               outside of class, hobbies, etc. Replace or expand as you like. -->
+          <p>
+            Outside of coursework I like taking on independent hardware projects end-to-end — schematic,
+            PCB layout, firmware, and eventually a working system on my desk. A few of those are in the
+            Projects section below.
+          </p>
+        </div>
+
+        <div class="about-focus skill-card fade-in">
+          <h3 class="skill-cat">Where I Focus</h3>
+          <div class="skill-tags">
+            <span>Embedded Systems</span>
+            <span>PCB Design</span>
+            <span>AI / ML</span>
+            <span>Data Engineering</span>
+            <span>Systems Automation</span>
           </div>
-          <div class="readout-row">
-            <dt>MINOR</dt>
-            <dd>Electrical Engineering</dd>
-          </div>
-          <div class="readout-row">
-            <dt>INSTITUTION</dt>
-            <dd>University of South Carolina</dd>
-          </div>
-          <div class="readout-row">
-            <dt>GRAD DATE</dt>
-            <dd>May 2027</dd>
-          </div>
-          <div class="readout-row">
-            <dt>STATUS</dt>
-            <dd><span class="status-dot"></span>Open to Summer 2027 internships</dd>
-          </div>
-        </dl>
+        </div>
       </div>
     </div>
   </section>
@@ -120,7 +173,7 @@
   <!-- ============ EXPERIENCE ============ -->
   <section id="experience" class="section">
     <div class="section-inner">
-      <p class="eyebrow fade-in">// 01 — EXPERIENCE</p>
+      <p class="eyebrow fade-in">// 02 — EXPERIENCE</p>
       <h2 class="section-title fade-in">Where I've Worked</h2>
 
       <div class="timeline">
@@ -193,55 +246,115 @@
   <!-- ============ PROJECTS ============ -->
   <section id="projects" class="section">
     <div class="section-inner">
-      <p class="eyebrow fade-in">// 02 — PROJECTS</p>
+      <p class="eyebrow fade-in">// 03 — PROJECTS</p>
       <h2 class="section-title fade-in">Things I've Built</h2>
+      <p class="section-lede fade-in">Click any project for the full writeup, photos, and video.</p>
 
       <div class="project-grid">
 
         <!-- PROJECT: Modern Telegraph Relay System -->
-        <article class="project-card fade-in">
-          <!-- TODO: replace .project-thumb div below with
-               <img src="assets/projects/telegraph-relay.jpg" alt="Modern Telegraph Relay System board"> -->
-          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+        <article class="project-card fade-in" data-modal="telegraph" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Modern Telegraph Relay System">
+          <div class="project-thumb project-thumb-img">
+            <img src="assets/projects/telegraph/endpoint-circuit.png" alt="Modern Telegraph Relay System — labeled endpoint circuit">
+          </div>
           <div class="project-body">
             <h3 class="project-title">Modern Telegraph Relay System</h3>
-            <p class="project-stack">Nucleo-G474RE · C++ · Embedded Firmware</p>
+            <p class="project-stack">Nucleo-G474RE · C++ · Embedded Firmware · ELCT 201 Capstone</p>
             <p class="project-desc">
-              Bidirectional signal relay bridging two isolated open-drain bus segments via NOR-gate
-              inversion and MOSFET gate drive. Iterated through 3 design revisions after diagnosing a
-              feedback-loop failure, landing on a store-and-forward architecture with a 700ms bail timeout.
+              Bidirectional Morse code relay bridging two isolated open-drain bus segments. Iterated
+              through 3 firmware designs after diagnosing a feedback-loop failure, landing on a
+              store-and-forward architecture with measured sub-millisecond overhead.
             </p>
             <div class="project-specs">
-              <span class="spec-chip">320µs / hop overhead</span>
-              <span class="spec-chip">510ms end-to-end</span>
-              <span class="spec-chip">Rev. 3</span>
+              <span class="spec-chip">C++</span>
+              <span class="spec-chip">Embedded Systems</span>
+              <span class="spec-chip">STM32</span>
+              <span class="spec-chip">Firmware</span>
+              <span class="spec-chip">Digital Logic</span>
+            </div>
+            <div class="project-footer">
+              <a class="project-link" href="https://github.com/jackschmitt/telegraph" target="_blank" rel="noopener">GitHub &rarr;</a>
+              <span class="project-cta">View details &rarr;</span>
             </div>
           </div>
         </article>
 
         <!-- PROJECT: PCB Temperature Sensor -->
-        <article class="project-card fade-in">
-          <!-- TODO: replace .project-thumb div below with
-               <img src="assets/projects/pcb-temp-sensor.jpg" alt="PCB temperature sensor board"> -->
-          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+        <article class="project-card fade-in" data-modal="pcb-sensor" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for PCB Temperature Sensor">
+          <div class="project-thumb project-thumb-img">
+            <img src="assets/projects/pcb-sensor/pcb-3d-render.png" alt="PCB Temperature Sensor — 3D KiCAD render">
+          </div>
           <div class="project-body">
-            <h3 class="project-title">PCB Temperature Sensor</h3>
-            <p class="project-stack">KiCAD · Thermistor Voltage Divider</p>
+            <h3 class="project-title">PCB Temperature Sensor — Food Warming Mat Monitor</h3>
+            <p class="project-stack">KiCAD · LTspice · Thermistor Voltage Divider · ELCT 201</p>
             <p class="project-desc">
-              Designed a 2-layer PCB end-to-end in KiCAD — schematic, footprints, routing, Gerber export —
-              then soldered and validated the board against a temperature profile.
+              Designed, simulated, fabricated, and tested a 4-threshold temperature sensor circuit on a
+              custom PCB, from component-level calculations through soldered hardware validation.
             </p>
             <div class="project-specs">
-              <span class="spec-chip">2-layer board</span>
-              <span class="spec-chip">Gerber export</span>
+              <span class="spec-chip">PCB Design</span>
+              <span class="spec-chip">KiCAD</span>
+              <span class="spec-chip">LTspice</span>
+              <span class="spec-chip">Analog Circuits</span>
+              <span class="spec-chip">Soldering</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-cta">View details &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Christmas Light Show -->
+        <article class="project-card fade-in" data-modal="christmas-lights" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Christmas Light Show">
+          <div class="project-thumb project-thumb-img">
+            <img src="assets/projects/christmas-lights/award.jpg" alt="Christmas Light Show — Best Use of Lights award">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Christmas Light Show</h3>
+            <!-- TODO: update subtitle/tags to match your actual stack (e.g. xLights, Falcon Player, WLED) -->
+            <p class="project-stack">Raspberry Pi · Holiday Lighting Controller</p>
+            <p class="project-desc">
+              Raspberry Pi–driven holiday light display wired through relay-controlled circuits, synced
+              to an FM broadcast. Won "Best Use of Lights" in the neighborhood's holiday contest.
+            </p>
+            <div class="project-specs">
+              <span class="spec-chip">Raspberry Pi</span>
+              <span class="spec-chip">Python</span>
+              <span class="spec-chip">Home Automation</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-cta">View details &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Magic Mirror -->
+        <article class="project-card fade-in" data-modal="magic-mirror" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Magic Mirror">
+          <!-- TODO: replace .project-thumb div below with
+               <img src="assets/projects/magic-mirror/cover.jpg" alt="Magic mirror smart display"> -->
+          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+          <div class="project-body">
+            <h3 class="project-title">Magic Mirror</h3>
+            <!-- TODO: update subtitle/tags to match your actual build (software used, frame material, etc.) -->
+            <p class="project-stack">Raspberry Pi · Two-Way Mirror Display</p>
+            <p class="project-desc">
+              Raspberry Pi–powered smart mirror displaying live widgets — time, weather, calendar, and
+              more — behind two-way mirror glass.
+            </p>
+            <div class="project-specs">
+              <span class="spec-chip">Raspberry Pi</span>
+              <span class="spec-chip">Python</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-cta">View details &rarr;</span>
             </div>
           </div>
         </article>
 
         <!-- PROJECT: Theta Tau Chapter Portal -->
-        <article class="project-card fade-in">
+        <article class="project-card fade-in" data-modal="theta-tau" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Theta Tau Chapter Portal">
           <!-- TODO: replace .project-thumb div below with
-               <img src="assets/projects/theta-tau-portal.jpg" alt="Theta Tau chapter portal website"> -->
+               <img src="assets/projects/theta-tau/cover.jpg" alt="Theta Tau chapter portal website"> -->
           <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
           <div class="project-body">
             <h3 class="project-title">Theta Tau Chapter Portal</h3>
@@ -254,14 +367,17 @@
               <span class="spec-chip">Open Source</span>
               <span class="spec-chip">Actively Maintained</span>
             </div>
-            <a class="project-link" href="https://github.thetatauzd.org" target="_blank" rel="noopener">github.thetatauzd.org &rarr;</a>
+            <div class="project-footer">
+              <a class="project-link" href="https://github.thetatauzd.org" target="_blank" rel="noopener">github.thetatauzd.org &rarr;</a>
+              <span class="project-cta">View details &rarr;</span>
+            </div>
           </div>
         </article>
 
         <!-- PROJECT: Autonomous Robot Navigation -->
-        <article class="project-card fade-in">
+        <article class="project-card fade-in" data-modal="duckiebot" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Autonomous Robot Navigation">
           <!-- TODO: replace .project-thumb div below with
-               <img src="assets/projects/duckiebot-nav.jpg" alt="Duckiebot autonomous navigation"> -->
+               <img src="assets/projects/duckiebot/cover.jpg" alt="Duckiebot autonomous navigation"> -->
           <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
           <div class="project-body">
             <h3 class="project-title">Autonomous Robot Navigation</h3>
@@ -273,30 +389,16 @@
               <span class="spec-chip">PID Control</span>
               <span class="spec-chip">ROS</span>
             </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: Morse Code Relay Network -->
-        <article class="project-card fade-in">
-          <!-- TODO: replace .project-thumb div below with
-               <img src="assets/projects/morse-relay-network.jpg" alt="ESP32 Morse code relay network"> -->
-          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
-          <div class="project-body">
-            <h3 class="project-title">Morse Code Relay Network</h3>
-            <p class="project-stack">4x ESP32</p>
-            <p class="project-desc">
-              Multi-node relay system across 4 ESP32 boards simulating long-distance signal repeater networks.
-            </p>
-            <div class="project-specs">
-              <span class="spec-chip">4 Nodes</span>
+            <div class="project-footer">
+              <span class="project-cta">View details &rarr;</span>
             </div>
           </div>
         </article>
 
         <!-- PROJECT: Self-Hosted NVR with AI Object Detection -->
-        <article class="project-card fade-in">
+        <article class="project-card fade-in" data-modal="nvr" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Self-Hosted NVR with AI Object Detection">
           <!-- TODO: replace .project-thumb div below with
-               <img src="assets/projects/nvr-object-detection.jpg" alt="Self-hosted NVR dashboard"> -->
+               <img src="assets/projects/nvr/cover.jpg" alt="Self-hosted NVR dashboard"> -->
           <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
           <div class="project-body">
             <div class="project-title-row">
@@ -310,6 +412,9 @@
             <div class="project-specs">
               <span class="spec-chip">Real-Time Inference</span>
             </div>
+            <div class="project-footer">
+              <span class="project-cta">View details &rarr;</span>
+            </div>
           </div>
         </article>
 
@@ -320,7 +425,7 @@
   <!-- ============ SKILLS ============ -->
   <section id="skills" class="section">
     <div class="section-inner">
-      <p class="eyebrow fade-in">// 03 — SKILLS</p>
+      <p class="eyebrow fade-in">// 04 — SKILLS</p>
       <h2 class="section-title fade-in">Toolset</h2>
 
       <div class="skills-grid">
@@ -363,7 +468,7 @@
   <!-- ============ RESUME ============ -->
   <section id="resume" class="section">
     <div class="section-inner">
-      <p class="eyebrow fade-in">// 04 — RESUME</p>
+      <p class="eyebrow fade-in">// 05 — RESUME</p>
       <h2 class="section-title fade-in">Résumé</h2>
 
       <!--
@@ -395,7 +500,7 @@
   <!-- ============ CONTACT ============ -->
   <section id="contact" class="section">
     <div class="section-inner">
-      <p class="eyebrow fade-in">// 05 — CONTACT</p>
+      <p class="eyebrow fade-in">// 06 — CONTACT</p>
       <h2 class="section-title fade-in">Get In Touch</h2>
       <p class="contact-lede fade-in">Open to Summer 2027 internships and interesting embedded/AI projects. Reach out any time.</p>
 
@@ -404,9 +509,9 @@
           <span class="contact-label">Email</span>
           <span class="contact-value">jackschmitt7@gmail.com</span>
         </a>
-        <a class="contact-card" href="https://www.linkedin.com/in/jack-schmitt" target="_blank" rel="noopener">
+        <a class="contact-card" href="https://www.linkedin.com/in/john-schmitty" target="_blank" rel="noopener">
           <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">in/jack-schmitt</span>
+          <span class="contact-value">in/john-schmitty</span>
         </a>
         <a class="contact-card" href="https://github.com/jackschmitt" target="_blank" rel="noopener">
           <span class="contact-label">GitHub</span>
@@ -424,6 +529,336 @@
     <span class="footer-mono">Built from scratch · No framework</span>
   </div>
 </footer>
+
+<!-- ============ PROJECT DETAIL MODAL ============ -->
+<div class="modal-overlay" id="project-modal" aria-hidden="true">
+  <div class="modal">
+    <button class="modal-close" id="modal-close" aria-label="Close project details">&times;</button>
+    <div class="modal-scroll">
+      <div class="modal-content" id="modal-content">
+        <!-- populated at runtime from the <template> elements below -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROJECT DETAIL TEMPLATES ============
+     Each <template> below is cloned into the modal when its matching
+     .project-card (data-modal="…") is clicked. Edit the content here
+     to update what shows up in the popout — nothing else to touch. -->
+
+<template id="tpl-telegraph">
+  <p class="modal-eyebrow">Project / Embedded Systems</p>
+  <h2>Modern Telegraph Relay System</h2>
+  <p class="modal-subtitle">Nucleo-G474RE · C++ · Embedded Firmware · ELCT 201 Capstone</p>
+  <div class="modal-tags">
+    <span class="spec-chip">C++</span>
+    <span class="spec-chip">Embedded Systems</span>
+    <span class="spec-chip">STM32</span>
+    <span class="spec-chip">Firmware</span>
+    <span class="spec-chip">Digital Logic</span>
+  </div>
+  <a class="project-link" href="https://github.com/jackschmitt/telegraph" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+
+  <h3 class="modal-h3">Overview</h3>
+  <p>
+    A two-station Morse code telegraph system connected through two relay stations, built as a 4-person
+    capstone project (team: Cole Kring, Heath McCullough, John Schmitt, Josh McGuire — ELCT 201,
+    University of South Carolina). Users press a push button at either endpoint to transmit Morse code,
+    which is repeated down the chain through two relay stations and played on a buzzer at the receiving end.
+  </p>
+
+  <h3 class="modal-h3">Relay Hardware — Open-Drain Bus Interface</h3>
+  <p>
+    The relay stations bridge two isolated bus segments using an open-drain interface built around
+    NOR-gate logic and MOSFET switching. Core components per relay node:
+  </p>
+  <ul class="modal-list">
+    <li><strong>Pull-up resistor (1kΩ) to 5V</strong> on each bus segment — holds the line HIGH when idle.</li>
+    <li><strong>N-channel MOSFET (IRF540N)</strong> — pulls the bus LOW when the transmit signal is active, acting as the "assert" mechanism.</li>
+    <li><strong>NOR gate (CD4001, quad 2-input NOR IC)</strong> — inverts the bus signal before it reaches the MCU input pin, and also drives the MOSFET gate from the MCU's output signal.</li>
+    <li><strong>Blue LED indicator</strong> on each bus segment, wired in series with the pull-up — lights when the bus goes LOW (hardware-driven, no firmware involvement needed for the indicator itself).</li>
+  </ul>
+
+  <h3 class="modal-h3">Signal Behavior</h3>
+  <pre class="code-block">MOSFET OFF (transmit low,  gate low)  -> pull-up holds bus HIGH  (idle)
+MOSFET ON  (transmit high, gate high) -> MOSFET pulls bus LOW   (active transmission)</pre>
+
+  <h3 class="modal-h3">Design Notes</h3>
+  <p>
+    <strong>Why NOR instead of the original Schmitt Trigger:</strong> the design started with a Schmitt
+    Trigger for signal conditioning, but testing showed it wasn't reliable for this open-drain
+    configuration, so the team swapped to a quad NOR gate (CD4001) instead — chosen because inverting
+    logic was needed to translate the bus's LOW-active signal into a HIGH read at the MCU input, and NOR
+    gates were readily available in a quad package that could serve both the invert and pull-down
+    functions from one IC per side.
+  </p>
+  <p>
+    <strong>Bus grounding:</strong> all relay nodes and both endpoints share a common ground, which is
+    required for the open-drain scheme to work across isolated segments — voltage sensed on one side
+    depends on a shared reference to be meaningful on the other.
+  </p>
+  <p>
+    <strong>Signal indication limitation:</strong> LEDs show one-sided bus activity per segment
+    (hardware-driven, no MCU involvement), but true collision detection (both directions active
+    simultaneously) isn't shown via a single LED — that state has to be resolved in software instead,
+    which is where the priority-checking logic in the relay firmware comes in.
+  </p>
+
+  <h3 class="modal-h3">Design Iteration &amp; Performance</h3>
+  <p>
+    The firmware went through three major revisions after an early design surfaced a feedback-loop
+    failure between relay stations. The final architecture uses a store-and-forward approach with a
+    700ms bail timeout to prevent runaway retransmission.
+  </p>
+  <div class="table-scroll">
+    <table class="data-table">
+      <thead><tr><th>Metric</th><th>Measured</th></tr></thead>
+      <tbody>
+        <tr><td>Per-hop relay overhead</td><td>320µs</td></tr>
+        <tr><td>End-to-end latency</td><td>510ms</td></tr>
+        <tr><td>Bail timeout</td><td>700ms</td></tr>
+        <tr><td>Firmware revision</td><td>Rev. 3</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="modal-h3">Gallery</h3>
+  <div class="modal-gallery">
+    <div class="gallery-item"><img src="assets/projects/telegraph/endpoint-circuit.png" alt="Complete endpoint circuit on breadboard, labeled with pull-up resistor, button, MOSFET, NOR gate, and buzzer"></div>
+    <div class="gallery-item"><img src="assets/projects/telegraph/protoboard-front-back.png" alt="Final soldered protoboard, front and back"></div>
+    <div class="gallery-item"><img src="assets/projects/telegraph/open-drain-schematic.png" alt="Open-drain bus interface schematic with pull-ups, NOR gates, and MOSFETs"></div>
+  </div>
+</template>
+
+<template id="tpl-pcb-sensor">
+  <p class="modal-eyebrow">Project / PCB Design</p>
+  <h2>PCB Temperature Sensor — Food Warming Mat Monitor</h2>
+  <p class="modal-subtitle">KiCAD · LTspice · Thermistor Voltage Divider · ELCT 201</p>
+  <div class="modal-tags">
+    <span class="spec-chip">PCB Design</span>
+    <span class="spec-chip">KiCAD</span>
+    <span class="spec-chip">LTspice</span>
+    <span class="spec-chip">Analog Circuits</span>
+    <span class="spec-chip">Soldering</span>
+  </div>
+
+  <h3 class="modal-h3">Overview</h3>
+  <p>
+    A four-threshold temperature sensor circuit designed for a food warming mat application, built
+    end-to-end: schematic design, LTspice simulation, PCB fabrication in KiCAD, and hardware validation.
+    Solo project (ELCT 201, University of South Carolina).
+  </p>
+
+  <h3 class="modal-h3">Circuit Design</h3>
+  <p>
+    An NTC thermistor in series with a 10kΩ bias resistor forms a voltage divider — as temperature rises,
+    thermistor resistance drops, and the sensor voltage rises. That voltage feeds the non-inverting
+    inputs of four LM324 op-amp comparators, each with an independently set reference voltage. When
+    sensor voltage exceeds a given reference, that comparator output goes high and lights an LED through
+    a 333Ω current-limiting resistor.
+  </p>
+  <p>Four thresholds selected: 30°C (room-safe), 45°C (warm serving), 60°C (hot serving), 75°C (overheat warning).</p>
+
+  <h3 class="modal-h3">Design Calculations</h3>
+  <p>Thermistor resistance at each threshold was calculated using the Steinhart-Hart approximation:</p>
+  <pre class="code-block">R_Temp = exp( ln(R_25C) − B_val × (1/T_25C − 1/T_Temp) )
+B_val  = 3977
+R_25C  = 10kΩ</pre>
+  <p>Reference voltages were matched to sensor voltages at each threshold using standard 5% resistor values:</p>
+  <div class="table-scroll">
+    <table class="data-table">
+      <thead><tr><th>Temp</th><th>Sensor V</th><th>Ref V</th><th>Upper R</th><th>Lower R</th></tr></thead>
+      <tbody>
+        <tr><td>30°C</td><td>2.774V</td><td>2.778V</td><td>1200Ω</td><td>1500Ω</td></tr>
+        <tr><td>45°C</td><td>3.491V</td><td>3.493V</td><td>2200Ω</td><td>5100Ω</td></tr>
+        <tr><td>60°C</td><td>4.012V</td><td>4.015V</td><td>2700Ω</td><td>11000Ω</td></tr>
+        <tr><td>75°C</td><td>4.358V</td><td>4.359V</td><td>1000Ω</td><td>6800Ω</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="modal-h3">PCB Design Process</h3>
+  <p>
+    Designed in KiCAD 7.0 — schematic capture, electrical rules check (ERC) verification, then PCB
+    layout. A single LM324 quad op-amp (DIP-14) implements all four comparators. Ground plane applied to
+    the bottom copper layer for low-impedance ground reference; signal traces routed on the top copper
+    layer. Final board: 5.49" × 2.58", quoted at $70.75 for three boards via OSH Park.
+  </p>
+
+  <h3 class="modal-h3">Simulation (LTspice)</h3>
+  <p>
+    Verified the full circuit topology before fabrication — thermistor modeled as a fixed resistor at
+    each design temperature. Confirmed comparators trigger sequentially as temperature rises: only the
+    first LED at 30°C, all four LEDs active by 75°C.
+  </p>
+
+  <h3 class="modal-h3">Hardware Results</h3>
+  <div class="table-scroll">
+    <table class="data-table">
+      <thead><tr><th>Threshold</th><th>Designed V</th><th>Measured V</th><th>Error</th></tr></thead>
+      <tbody>
+        <tr><td>30°C (D1)</td><td>2.778V</td><td>2.6V</td><td>6.4%</td></tr>
+        <tr><td>45°C (D2)</td><td>3.493V</td><td>3.4V</td><td>2.7%</td></tr>
+        <tr><td>60°C (D3)</td><td>4.015V</td><td>3.9V</td><td>2.9%</td></tr>
+        <tr><td>75°C (D4)</td><td>4.359V</td><td>4.2V</td><td>3.6%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    The 30°C threshold showed the largest deviation (6.4%), attributed to resistor tolerance stacking in
+    the R6/R7 divider — outside individual ±5% resistor tolerance but still an acceptable calibration
+    offset for the application (~3-4°C shift). The remaining three thresholds fell within the 5%
+    tolerance budget.
+  </p>
+
+  <h3 class="modal-h3">Power Analysis</h3>
+  <p>
+    Estimated current draw: ~3mA (no LEDs), ~21mA (2 LEDs), ~39mA (4 LEDs). Estimated battery life from 3
+    series AA cells (900mAh): ~23 hours under full load, ~300 hours idle.
+  </p>
+
+  <h3 class="modal-h3">Key Takeaways</h3>
+  <p>
+    The full engineering design cycle — component-level calculation → simulation → PCB fabrication →
+    hardware validation → calibration analysis — with a real, quantified discrepancy between designed
+    and measured values, and a working root-cause explanation (resistor tolerance stacking).
+  </p>
+
+  <h3 class="modal-h3">Gallery</h3>
+  <div class="modal-gallery">
+    <div class="gallery-item"><img src="assets/projects/pcb-sensor/schematic.png" alt="KiCAD schematic of the food warming mat temperature sensor circuit"></div>
+    <div class="gallery-item"><img src="assets/projects/pcb-sensor/pcb-3d-render.png" alt="KiCAD 3D viewer render of the completed PCB layout"></div>
+    <!-- TODO: replace with a real photo once available, e.g.
+         <img src="assets/projects/pcb-sensor/assembled-board.jpg" alt="Assembled and soldered board"> -->
+    <div class="gallery-item"><span>Assembled Board</span></div>
+  </div>
+</template>
+
+<template id="tpl-christmas-lights">
+  <p class="modal-eyebrow">Project / Raspberry Pi</p>
+  <h2>Christmas Light Show</h2>
+  <p class="modal-subtitle">Raspberry Pi · Holiday Lighting Controller</p>
+  <div class="modal-tags">
+    <span class="spec-chip">Raspberry Pi</span>
+    <span class="spec-chip">Python</span>
+    <span class="spec-chip">Home Automation</span>
+  </div>
+
+  <h3 class="modal-h3">Overview</h3>
+  <p>
+    A Raspberry Pi–controlled holiday light display wired through three 8-channel relay boards driving
+    individual mechanical relays for each lighting circuit, mounted on a custom-built plywood control
+    panel. The show ran synced to an FM broadcast — visitors could tune their car radio to 104.5 FM to
+    hear music timed to the lights. It won <strong>"Best Use of Lights"</strong> in the neighborhood's
+    Branches Holiday Contest.
+  </p>
+  <!-- TODO: add more detail here — what software sequences the show (e.g. xLights, Falcon Player),
+       how audio sync works, exact channel/prop count, and how the schedule is triggered. -->
+
+  <h3 class="modal-h3">Gallery</h3>
+  <div class="modal-gallery">
+    <div class="gallery-item"><img src="assets/projects/christmas-lights/wiring.jpg" alt="Relay control panel — three 8-channel relay boards wired to individual mechanical relays on plywood"></div>
+    <div class="gallery-item"><img src="assets/projects/christmas-lights/award.jpg" alt="Best Use of Lights award sign, Branches Holiday Contest, tune to 104.5 FM"></div>
+    <!-- TODO: once your Christmas Light Show video is uploaded (YouTube/Vimeo — unlisted is fine),
+         swap this placeholder for an embed, e.g.:
+         <div class="gallery-item gallery-video">
+           <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Christmas Light Show" loading="lazy" allowfullscreen></iframe>
+         </div> -->
+    <div class="gallery-item"><span>Video — add link once uploaded</span></div>
+  </div>
+</template>
+
+<template id="tpl-magic-mirror">
+  <p class="modal-eyebrow">Project / Raspberry Pi</p>
+  <h2>Magic Mirror</h2>
+  <p class="modal-subtitle">Raspberry Pi · Two-Way Mirror Display</p>
+  <div class="modal-tags">
+    <span class="spec-chip">Raspberry Pi</span>
+    <span class="spec-chip">Python</span>
+  </div>
+
+  <h3 class="modal-h3">Overview</h3>
+  <!-- TODO: replace this placeholder with real details — frame/enclosure build, display panel used,
+       software/modules running (e.g. MagicMirror², custom scripts), and what info it shows. -->
+  <p class="modal-placeholder">
+    Add an overview here: how the frame/enclosure was built, what display and two-way mirror glass you
+    used, what software or modules run on it, and what it shows (time, weather, calendar, etc.).
+  </p>
+
+  <h3 class="modal-h3">Gallery</h3>
+  <div class="modal-gallery">
+    <!-- TODO: replace each placeholder with a real photo/video, e.g.
+         <img src="assets/projects/magic-mirror/assembled.jpg" alt="Magic mirror — assembled"> -->
+    <div class="gallery-item"><span>Mirror — Assembled</span></div>
+    <div class="gallery-item"><span>Frame / Enclosure Build</span></div>
+    <div class="gallery-item"><span>Software / Modules</span></div>
+  </div>
+</template>
+
+<template id="tpl-theta-tau">
+  <p class="modal-eyebrow">Project / Web Development</p>
+  <h2>Theta Tau Chapter Portal</h2>
+  <p class="modal-subtitle">Firebase · GitHub Pages · JavaScript</p>
+  <div class="modal-tags">
+    <span class="spec-chip">Open Source</span>
+    <span class="spec-chip">Actively Maintained</span>
+  </div>
+  <a class="project-link" href="https://github.thetatauzd.org" target="_blank" rel="noopener">github.thetatauzd.org &rarr;</a>
+
+  <h3 class="modal-h3">Overview</h3>
+  <p>
+    Chapter website for Theta Tau, built with a Firebase Realtime Database backend, role-based auth, and
+    live voting for chapter decisions. Open source and actively maintained.
+  </p>
+
+  <h3 class="modal-h3">Gallery</h3>
+  <div class="modal-gallery">
+    <!-- TODO: replace each placeholder with a real screenshot, e.g.
+         <img src="assets/projects/theta-tau/homepage.jpg" alt="Theta Tau portal homepage"> -->
+    <div class="gallery-item"><span>Portal — Homepage</span></div>
+    <div class="gallery-item"><span>Voting Interface</span></div>
+  </div>
+</template>
+
+<template id="tpl-duckiebot">
+  <p class="modal-eyebrow">Project / Robotics</p>
+  <h2>Autonomous Robot Navigation</h2>
+  <p class="modal-subtitle">Duckiebot · ROS · Docker · PID Control</p>
+  <div class="modal-tags">
+    <span class="spec-chip">PID Control</span>
+    <span class="spec-chip">ROS</span>
+  </div>
+
+  <h3 class="modal-h3">Overview</h3>
+  <p>Implemented PID control for autonomous robot navigation on a Duckiebot platform running ROS in Docker.</p>
+
+  <h3 class="modal-h3">Gallery</h3>
+  <div class="modal-gallery">
+    <!-- TODO: replace each placeholder with a real photo/video, e.g.
+         <img src="assets/projects/duckiebot/track-run.jpg" alt="Duckiebot on the track"> -->
+    <div class="gallery-item"><span>Duckiebot — Track Run</span></div>
+  </div>
+</template>
+
+<template id="tpl-nvr">
+  <p class="modal-eyebrow">Project / Self-Hosted <span class="badge badge-progress">In Progress</span></p>
+  <h2>Self-Hosted NVR with AI Object Detection</h2>
+  <p class="modal-subtitle">Frigate · Docker · RTSP</p>
+  <div class="modal-tags">
+    <span class="spec-chip">Real-Time Inference</span>
+  </div>
+
+  <h3 class="modal-h3">Overview</h3>
+  <p>Self-hosted network video recorder integrating RTSP cameras with real-time AI object detection via Frigate, running in Docker.</p>
+
+  <h3 class="modal-h3">Gallery</h3>
+  <div class="modal-gallery">
+    <!-- TODO: replace each placeholder with a real screenshot, e.g.
+         <img src="assets/projects/nvr/dashboard.jpg" alt="Frigate dashboard"> -->
+    <div class="gallery-item"><span>Dashboard — Live View</span></div>
+  </div>
+</template>
 
 <script src="js/main.js"></script>
 </body>

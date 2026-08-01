@@ -54,4 +54,53 @@
   // Footer year
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Project detail modal
+  const modalOverlay = document.getElementById('project-modal');
+  const modalContent = document.getElementById('modal-content');
+  const modalClose = document.getElementById('modal-close');
+  const projectCards = Array.from(document.querySelectorAll('.project-card[data-modal]'));
+  let lastFocusedEl = null;
+
+  function openModal(slug) {
+    const tpl = document.getElementById(`tpl-${slug}`);
+    if (!tpl) return;
+    modalContent.innerHTML = '';
+    modalContent.appendChild(tpl.content.cloneNode(true));
+    lastFocusedEl = document.activeElement;
+    modalOverlay.classList.add('open');
+    modalOverlay.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    modalContent.scrollTop = 0;
+    modalClose.focus();
+  }
+
+  function closeModal() {
+    modalOverlay.classList.remove('open');
+    modalOverlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    if (lastFocusedEl) lastFocusedEl.focus();
+  }
+
+  projectCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
+      openModal(card.dataset.modal);
+    });
+    card.addEventListener('keydown', (e) => {
+      if (e.target.closest('a')) return;
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal(card.dataset.modal);
+      }
+    });
+  });
+
+  modalClose.addEventListener('click', closeModal);
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('open')) closeModal();
+  });
 })();
