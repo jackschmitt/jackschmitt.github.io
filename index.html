@@ -534,6 +534,15 @@
   </div>
 </div>
 
+<!-- ============ GALLERY LIGHTBOX ============ -->
+<div class="lightbox-overlay" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous">&larr;</button>
+  <div class="lightbox-stage" id="lightbox-stage"></div>
+  <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next">&rarr;</button>
+  <p class="lightbox-counter" id="lightbox-counter"></p>
+</div>
+
 <!-- ============ PROJECT DETAIL TEMPLATES ============
      Each <template> below is cloned into the modal when its matching
      .project-card (data-modal="…") is clicked. Edit the content here

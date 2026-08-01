@@ -1073,6 +1073,146 @@ body.modal-open { overflow: hidden; }
   aspect-ratio: 16 / 9;
 }
 
+.gallery-item-clickable {
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.gallery-item-clickable:hover,
+.gallery-item-clickable:focus-visible {
+  transform: scale(1.03);
+  border-color: var(--accent);
+}
+.gallery-item-clickable:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.gallery-item-clickable::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0) 60%, rgba(0,0,0,0.55)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f2ab55' stroke-width='2'%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: bottom 8px right 8px;
+  background-size: 16px 16px, 16px 16px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+.gallery-item-clickable:hover::after,
+.gallery-item-clickable:focus-visible::after {
+  opacity: 1;
+}
+
+/* =========================================================
+   Gallery Lightbox
+   ========================================================= */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4, 5, 6, 0.94);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0s linear 0.2s;
+}
+.lightbox-overlay.open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox-stage {
+  width: 100%;
+  max-width: 960px;
+  max-height: 85vh;
+  padding: 0 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-stage img {
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.8);
+}
+.lightbox-stage iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,0.8);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-dim);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.lightbox-close:hover { color: var(--accent-bright); border-color: var(--accent); }
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.lightbox-nav:hover { color: var(--accent-bright); border-color: var(--accent); }
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  color: var(--text-faint);
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .lightbox-stage { padding: 0 56px; }
+  .lightbox-nav { width: 40px; height: 40px; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+  .lightbox-close { top: 12px; right: 12px; }
+}
+
 /* =========================================================
    Scroll-triggered animation
    ========================================================= */

@@ -67,6 +67,7 @@
     if (!tpl) return;
     modalContent.innerHTML = '';
     modalContent.appendChild(tpl.content.cloneNode(true));
+    setupGalleries(modalContent);
     lastFocusedEl = document.activeElement;
     modalOverlay.classList.add('open');
     modalOverlay.setAttribute('aria-hidden', 'false');
@@ -100,7 +101,125 @@
   modalOverlay.addEventListener('click', (e) => {
     if (e.target === modalOverlay) closeModal();
   });
+
+  // Gallery lightbox — click any photo/video in a project's gallery to view
+  // it larger, with prev/next to step through the rest of that gallery.
+  const lightbox = document.getElementById('lightbox');
+  const lightboxStage = document.getElementById('lightbox-stage');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxPrev = document.getElementById('lightbox-prev');
+  const lightboxNext = document.getElementById('lightbox-next');
+  const lightboxCounter = document.getElementById('lightbox-counter');
+  let currentGallery = [];
+  let currentIndex = 0;
+  let lastLightboxFocus = null;
+
+  function renderLightboxItem() {
+    const item = currentGallery[currentIndex];
+    lightboxStage.innerHTML = '';
+    if (item.type === 'video') {
+      const iframe = document.createElement('iframe');
+      iframe.src = item.src;
+      iframe.title = item.label;
+      iframe.loading = 'lazy';
+      iframe.allowFullscreen = true;
+      lightboxStage.appendChild(iframe);
+    } else {
+      const img = document.createElement('img');
+      img.src = item.src;
+      img.alt = item.label;
+      lightboxStage.appendChild(img);
+    }
+    const multi = currentGallery.length > 1;
+    lightboxPrev.style.display = multi ? '' : 'none';
+    lightboxNext.style.display = multi ? '' : 'none';
+    lightboxCounter.textContent = multi ? `${currentIndex + 1} / ${currentGallery.length}` : '';
+  }
+
+  function openLightbox(gallery, index) {
+    currentGallery = gallery;
+    currentIndex = index;
+    lastLightboxFocus = document.activeElement;
+    renderLightboxItem();
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    lightboxClose.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightboxStage.innerHTML = '';
+    if (lastLightboxFocus) lastLightboxFocus.focus();
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    renderLightboxItem();
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    renderLightboxItem();
+  }
+
+  function setupGalleries(container) {
+    container.querySelectorAll('.modal-gallery').forEach(galleryEl => {
+      const items = Array.from(galleryEl.querySelectorAll('.gallery-item'));
+      const media = [];
+      items.forEach(item => {
+        const img = item.querySelector('img');
+        const iframe = item.querySelector('iframe');
+        if (img) {
+          media.push({ type: 'image', src: img.getAttribute('src'), label: img.getAttribute('alt') || '' });
+        } else if (iframe) {
+          media.push({ type: 'video', src: iframe.getAttribute('src'), label: iframe.getAttribute('title') || '' });
+        }
+      });
+      let mediaIndex = 0;
+      items.forEach(item => {
+        if (!item.querySelector('img, iframe')) return; // skip unfilled placeholders
+        const index = mediaIndex++;
+        item.classList.add('gallery-item-clickable');
+        item.setAttribute('role', 'button');
+        item.setAttribute('tabindex', '0');
+        item.setAttribute('aria-label', `View larger: ${media[index].label || 'gallery item'}`);
+        item.addEventListener('click', () => openLightbox(media, index));
+        item.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openLightbox(media, index);
+          }
+        });
+      });
+    });
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxNext.addEventListener('click', showNext);
+  lightboxPrev.addEventListener('click', showPrev);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  let touchStartX = null;
+  lightboxStage.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+  });
+  lightboxStage.addEventListener('touchend', (e) => {
+    if (touchStartX === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) (dx < 0 ? showNext : showPrev)();
+    touchStartX = null;
+  });
+
   document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('open')) {
+      if (e.key === 'Escape') closeLightbox();
+      else if (e.key === 'ArrowRight') showNext();
+      else if (e.key === 'ArrowLeft') showPrev();
+      return;
+    }
     if (e.key === 'Escape' && modalOverlay.classList.contains('open')) closeModal();
   });
 })();
