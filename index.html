@@ -86,9 +86,7 @@
       <div class="hero-aside fade-in">
         <div class="photo-card">
           <div class="photo-frame">
-            <!-- TODO: replace the placeholder div below with:
-                 <img src="assets/profile.jpg" alt="Jack Schmitt"> -->
-            <div class="photo-placeholder" aria-hidden="true"><span>IMG</span></div>
+            <img src="assets/headshot.png" alt="Jack Schmitt">
             <span class="frame-corner corner-tl"></span>
             <span class="frame-corner corner-tr"></span>
             <span class="frame-corner corner-bl"></span>
@@ -125,7 +123,7 @@
             </div>
             <div class="readout-row">
               <dt>STATUS</dt>
-              <dd><span class="status-dot"></span>Open to Summer 2027 internships</dd>
+              <dd><span class="status-dot"></span>Open to full-time roles — May 2027 start</dd>
             </div>
           </dl>
         </div>
@@ -141,18 +139,12 @@
 
       <div class="about-grid">
         <div class="about-copy fade-in">
+          <!-- TODO: add anything else you want here — hobbies, interests, what got you into engineering. -->
           <p>
-            I've spent the last few years splitting time between breadboards and code editors — sometimes
-            on the same project. At the University of South Carolina, I'm pursuing a Computer Engineering
-            degree with an AI concentration, which fits how I like to work: understand the hardware a
-            system runs on, then build the software that makes it useful.
-          </p>
-          <!-- TODO: personalize this paragraph — what got you into engineering, what you're building
-               outside of class, hobbies, etc. Replace or expand as you like. -->
-          <p>
-            Outside of coursework I like taking on independent hardware projects end-to-end — schematic,
-            PCB layout, firmware, and eventually a working system on my desk. A few of those are in the
-            Projects section below.
+            I'm a rising senior at the University of South Carolina, graduating May 2027 with a Computer
+            Engineering degree (AI concentration) and an Electrical Engineering minor. I've interned in
+            infrastructure/data engineering, systems engineering, and IT, and I build hardware projects on
+            my own time — schematic through firmware — a few of which are in the Projects section below.
           </p>
         </div>
 
@@ -502,7 +494,7 @@
     <div class="section-inner">
       <p class="eyebrow fade-in">// 06 — CONTACT</p>
       <h2 class="section-title fade-in">Get In Touch</h2>
-      <p class="contact-lede fade-in">Open to Summer 2027 internships and interesting embedded/AI projects. Reach out any time.</p>
+      <p class="contact-lede fade-in">Open to full-time roles starting May 2027, and interesting embedded/AI projects. Reach out any time.</p>
 
       <div class="contact-grid fade-in">
         <a class="contact-card" href="mailto:jackschmitt7@gmail.com">
@@ -585,14 +577,6 @@
 MOSFET ON  (transmit high, gate high) -> MOSFET pulls bus LOW   (active transmission)</pre>
 
   <h3 class="modal-h3">Design Notes</h3>
-  <p>
-    <strong>Why NOR instead of the original Schmitt Trigger:</strong> the design started with a Schmitt
-    Trigger for signal conditioning, but testing showed it wasn't reliable for this open-drain
-    configuration, so the team swapped to a quad NOR gate (CD4001) instead — chosen because inverting
-    logic was needed to translate the bus's LOW-active signal into a HIGH read at the MCU input, and NOR
-    gates were readily available in a quad package that could serve both the invert and pull-down
-    functions from one IC per side.
-  </p>
   <p>
     <strong>Bus grounding:</strong> all relay nodes and both endpoints share a common ground, which is
     required for the open-drain scheme to work across isolated segments — voltage sensed on one side
@@ -760,12 +744,9 @@ R_25C  = 10kΩ</pre>
   <div class="modal-gallery">
     <div class="gallery-item"><img src="assets/projects/christmas-lights/wiring.jpg" alt="Relay control panel — three 8-channel relay boards wired to individual mechanical relays on plywood"></div>
     <div class="gallery-item"><img src="assets/projects/christmas-lights/award.jpg" alt="Best Use of Lights award sign, Branches Holiday Contest, tune to 104.5 FM"></div>
-    <!-- TODO: once your Christmas Light Show video is uploaded (YouTube/Vimeo — unlisted is fine),
-         swap this placeholder for an embed, e.g.:
-         <div class="gallery-item gallery-video">
-           <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Christmas Light Show" loading="lazy" allowfullscreen></iframe>
-         </div> -->
-    <div class="gallery-item"><span>Video — add link once uploaded</span></div>
+    <div class="gallery-item gallery-video">
+      <iframe src="https://www.youtube.com/embed/T97HNTbAWDw" title="Christmas Light Show" loading="lazy" allowfullscreen></iframe>
+    </div>
   </div>
 </template>
 
@@ -835,9 +816,9 @@ R_25C  = 10kΩ</pre>
 
   <h3 class="modal-h3">Gallery</h3>
   <div class="modal-gallery">
-    <!-- TODO: replace each placeholder with a real photo/video, e.g.
-         <img src="assets/projects/duckiebot/track-run.jpg" alt="Duckiebot on the track"> -->
-    <div class="gallery-item"><span>Duckiebot — Track Run</span></div>
+    <div class="gallery-item gallery-video">
+      <iframe src="https://www.youtube.com/embed/XKx29BpsUXA" title="Autonomous Robot Navigation — Duckiebot" loading="lazy" allowfullscreen></iframe>
+    </div>
   </div>
 </template>
 
