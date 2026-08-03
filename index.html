@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jack Schmitt</title>
-<meta name="description" content="Jack Schmitt, Computer Engineering student at the University of South Carolina, building at the intersection of embedded systems and AI.">
+<meta name="description" content="Jack Schmitt, Computer Engineering student at the University of South Carolina. I build hardware and the software that runs on it.">
 
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
@@ -68,8 +68,8 @@
         <h1 class="hero-name">Jack Schmitt</h1>
         <p class="hero-tagline">Computer engineer. I build hardware and the software that runs on it.</p>
         <p class="hero-intro">
-          Rising senior at South Carolina: B.S. Computer Engineering, AI concentration, EE minor. I enjoy
-          the crossover between hardware and software.
+          Rising senior at South Carolina: B.S. Computer Engineering, AI concentration, EE minor. I like
+          working close to the metal. I design the board, write the firmware, and build whatever runs on top.
         </p>
 
         <div class="hero-links">
@@ -142,13 +142,29 @@
           <div class="timeline-content">
             <div class="timeline-head">
               <h3>Infrastructure Operations Intern</h3>
-              <span class="timeline-date">May 2026 to Present</span>
+              <span class="timeline-date">May 2026 – Present</span>
             </div>
             <p class="timeline-org">Cox Enterprises · Sandy Springs, GA</p>
             <ul class="timeline-bullets">
               <li>Built PySpark/Python notebooks in Microsoft Fabric to transform data across lakehouses for enterprise reporting.</li>
               <li>Developed REST APIs connecting internal Cox systems and databases, powering a Power BI cost dashboard across 4 data sources.</li>
-              <li>Used Git for version control while contributing to AI adoption initiatives (Copilot Studio) at a Fortune 500 company.</li>
+              <li>Contributed to enterprise AI adoption initiatives, building Copilot Studio agents and Power Automate flows for internal teams.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Regent (Chapter President)</h3>
+              <span class="timeline-date">Dec 2025 – Present</span>
+            </div>
+            <p class="timeline-org">Theta Tau, Zeta Delta Chapter · Columbia, SC</p>
+            <ul class="timeline-bullets">
+              <li>Lead a 40+ member professional engineering fraternity: recruitment, national compliance, chapter finances, and events.</li>
+              <li>Built and maintain the chapter's brother portal, with Firebase auth, role-based access, and live voting used for chapter decisions.</li>
+              <li>Drafted national award submissions across website, philanthropy, and service.</li>
             </ul>
           </div>
         </article>
@@ -158,7 +174,7 @@
           <div class="timeline-content">
             <div class="timeline-head">
               <h3>Systems Engineering Intern</h3>
-              <span class="timeline-date">May 2025 to Aug 2025</span>
+              <span class="timeline-date">May 2025 – Aug 2025</span>
             </div>
             <p class="timeline-org">Golden Code Development · Atlanta, GA</p>
             <ul class="timeline-bullets">
@@ -174,7 +190,7 @@
           <div class="timeline-content">
             <div class="timeline-head">
               <h3>IT Intern</h3>
-              <span class="timeline-date">May 2025 to Aug 2025</span>
+              <span class="timeline-date">May 2025 – Aug 2025</span>
             </div>
             <p class="timeline-org">Strategic Benefits Advisors · Atlanta, GA</p>
             <ul class="timeline-bullets">
@@ -189,11 +205,11 @@
           <div class="timeline-content">
             <div class="timeline-head">
               <h3>Ambassador &amp; Social Media Intern</h3>
-              <span class="timeline-date">Sep 2024 to Present</span>
+              <span class="timeline-date">Sep 2024 – Present</span>
             </div>
             <p class="timeline-org">Molinaroli College of Engineering &amp; Computing · Columbia, SC</p>
             <ul class="timeline-bullets">
-              <li>Produces professional-grade video content for the college.</li>
+              <li>Shoot and edit video content for the college's recruiting and social channels.</li>
             </ul>
           </div>
         </article>
@@ -222,7 +238,7 @@
             <p class="project-desc">
               Bidirectional Morse code relay bridging two isolated open-drain bus segments. Iterated
               through 3 firmware designs after diagnosing a feedback-loop failure, landing on a
-              store-and-forward architecture with measured sub-millisecond overhead.
+              store-and-forward architecture with 320µs per-hop relay overhead.
             </p>
             <div class="project-specs">
               <span class="spec-chip">C++</span>
@@ -263,46 +279,26 @@
           </div>
         </article>
 
-        <!-- PROJECT: Christmas Light Show -->
-        <article class="project-card fade-in" data-modal="christmas-lights" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Christmas Light Show">
-          <div class="project-thumb project-thumb-img">
-            <img src="assets/projects/christmas-lights/award.jpg" alt="Christmas Light Show, Best Use of Lights award">
-          </div>
+        <!-- PROJECT: Volunteer Coordination Platform -->
+        <article class="project-card fade-in" data-modal="volunteer-platform" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Volunteer Coordination Platform">
+          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
           <div class="project-body">
-            <h3 class="project-title">Christmas Light Show</h3>
-            <!-- TODO: update subtitle/tags to match your actual stack (e.g. xLights, Falcon Player, WLED) -->
-            <p class="project-stack">Raspberry Pi · Holiday Lighting Controller</p>
+            <div class="project-title-row">
+              <h3 class="project-title">Volunteer Coordination Platform</h3>
+              <span class="badge badge-progress">In Progress</span>
+            </div>
+            <p class="project-stack">React 19 · Azure Functions · Cosmos DB · Python</p>
             <p class="project-desc">
-              Raspberry Pi-driven holiday light display wired through relay-controlled circuits, synced
-              to an FM broadcast. Won "Best Use of Lights" in the neighborhood's holiday contest.
+              Full-stack volunteer platform for a corporate bootcamp program. React frontend with
+              QR-based event check-in and MapLibre maps, Python Azure Functions backend over a Cosmos DB
+              NoSQL store, deployed through two GitHub Actions pipelines.
             </p>
             <div class="project-specs">
-              <span class="spec-chip">Raspberry Pi</span>
+              <span class="spec-chip">React</span>
+              <span class="spec-chip">Azure</span>
               <span class="spec-chip">Python</span>
-              <span class="spec-chip">Home Automation</span>
-            </div>
-            <div class="project-footer">
-              <span class="project-cta">View details &rarr;</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJECT: Magic Mirror -->
-        <article class="project-card fade-in" data-modal="magic-mirror" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Magic Mirror">
-          <div class="project-thumb project-thumb-img">
-            <img src="assets/projects/magic-mirror/mirror-display.jpg" alt="Magic Mirror, live display showing time and weather">
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">Magic Mirror</h3>
-            <!-- TODO: update tags once you confirm the exact software/modules running the display -->
-            <p class="project-stack">Raspberry Pi · Two-Way Mirror Display</p>
-            <p class="project-desc">
-              Smart mirror built into a stained wood frame: two-way mirror glass over a repurposed
-              monitor, driven by a Raspberry Pi, showing live time and weather.
-            </p>
-            <div class="project-specs">
-              <span class="spec-chip">Raspberry Pi</span>
-              <span class="spec-chip">Two-Way Mirror</span>
+              <span class="spec-chip">Cosmos DB</span>
+              <span class="spec-chip">CI/CD</span>
             </div>
             <div class="project-footer">
               <span class="project-cta">View details &rarr;</span>
@@ -333,11 +329,32 @@
           </div>
         </article>
 
+        <!-- PROJECT: Self-Hosted NVR with AI Object Detection -->
+        <article class="project-card fade-in" data-modal="nvr" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Self-Hosted NVR with AI Object Detection">
+          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+          <div class="project-body">
+            <div class="project-title-row">
+              <h3 class="project-title">Self-Hosted NVR with AI Object Detection</h3>
+              <span class="badge badge-progress">In Progress</span>
+            </div>
+            <p class="project-stack">Frigate · Docker · RTSP</p>
+            <p class="project-desc">
+              Self-hosted network video recorder integrating RTSP cameras with real-time AI object detection.
+            </p>
+            <div class="project-specs">
+              <span class="spec-chip">Real-Time Inference</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-cta">View details &rarr;</span>
+            </div>
+          </div>
+        </article>
+
         <!-- PROJECT: Autonomous Robot Navigation -->
         <article class="project-card fade-in" data-modal="duckiebot" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Autonomous Robot Navigation">
-          <!-- TODO: replace .project-thumb div below with
-               <img src="assets/projects/duckiebot/cover.jpg" alt="Duckiebot autonomous navigation"> -->
-          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+          <div class="project-thumb project-thumb-img">
+            <img src="https://img.youtube.com/vi/XKx29BpsUXA/maxresdefault.jpg" alt="Duckiebot autonomous navigation demo">
+          </div>
           <div class="project-body">
             <h3 class="project-title">Autonomous Robot Navigation</h3>
             <p class="project-stack">Duckiebot · ROS · Docker · PID Control</p>
@@ -354,22 +371,44 @@
           </div>
         </article>
 
-        <!-- PROJECT: Self-Hosted NVR with AI Object Detection -->
-        <article class="project-card fade-in" data-modal="nvr" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Self-Hosted NVR with AI Object Detection">
-          <!-- TODO: replace .project-thumb div below with
-               <img src="assets/projects/nvr/cover.jpg" alt="Self-hosted NVR dashboard"> -->
-          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+        <!-- PROJECT: Christmas Light Show -->
+        <article class="project-card fade-in" data-modal="christmas-lights" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Christmas Light Show">
+          <div class="project-thumb project-thumb-img">
+            <img src="assets/projects/christmas-lights/award.jpg" alt="Christmas Light Show, Best Use of Lights award">
+          </div>
           <div class="project-body">
-            <div class="project-title-row">
-              <h3 class="project-title">Self-Hosted NVR with AI Object Detection</h3>
-              <span class="badge badge-progress">In Progress</span>
-            </div>
-            <p class="project-stack">Frigate · Docker · RTSP</p>
+            <h3 class="project-title">Christmas Light Show</h3>
+            <p class="project-stack">Raspberry Pi · Holiday Lighting Controller</p>
             <p class="project-desc">
-              Self-hosted network video recorder integrating RTSP cameras with real-time AI object detection.
+              Raspberry Pi-driven holiday light display wired through relay-controlled circuits, synced
+              to an FM broadcast. Won "Best Use of Lights" in the neighborhood's holiday contest.
             </p>
             <div class="project-specs">
-              <span class="spec-chip">Real-Time Inference</span>
+              <span class="spec-chip">Raspberry Pi</span>
+              <span class="spec-chip">Python</span>
+              <span class="spec-chip">Home Automation</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-cta">View details &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Magic Mirror -->
+        <article class="project-card fade-in" data-modal="magic-mirror" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Magic Mirror">
+          <div class="project-thumb project-thumb-img">
+            <img src="assets/projects/magic-mirror/mirror-display.jpg" alt="Magic Mirror, live display showing time and weather">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Magic Mirror</h3>
+            <p class="project-stack">Raspberry Pi · Two-Way Mirror Display</p>
+            <p class="project-desc">
+              Smart mirror built into a stained wood frame: two-way mirror glass over a repurposed
+              monitor, driven by a Raspberry Pi, showing live time and weather.
+            </p>
+            <div class="project-specs">
+              <span class="spec-chip">Raspberry Pi</span>
+              <span class="spec-chip">Two-Way Mirror</span>
             </div>
             <div class="project-footer">
               <span class="project-cta">View details &rarr;</span>
@@ -430,10 +469,6 @@
       <p class="eyebrow fade-in">// 04: RESUME</p>
       <h2 class="section-title fade-in">Résumé</h2>
 
-      <!--
-        Drop your resume PDF at: assets/resume/Jack_Schmitt_Resume.pdf
-        The card below links/downloads that path directly. No other changes needed.
-      -->
       <div class="resume-card fade-in">
         <div class="resume-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -709,90 +744,35 @@ R_25C  = 10kΩ</pre>
       <div class="gallery-media"><img src="assets/projects/pcb-sensor/pcb-3d-render.png" alt="KiCAD 3D viewer render of the completed PCB layout"></div>
       <figcaption class="gallery-caption">3D render of the completed PCB</figcaption>
     </figure>
-    <!-- TODO: replace with a real photo once available, e.g.
-         <figure class="gallery-item">
-           <div class="gallery-media"><img src="assets/projects/pcb-sensor/assembled-board.jpg" alt="Assembled and soldered board"></div>
-           <figcaption class="gallery-caption">Assembled and soldered board</figcaption>
-         </figure> -->
-    <figure class="gallery-item">
-      <div class="gallery-media"><span>Assembled Board</span></div>
-    </figure>
   </div>
 </template>
 
-<template id="tpl-christmas-lights">
-  <p class="modal-eyebrow">Project / Raspberry Pi</p>
-  <h2>Christmas Light Show</h2>
-  <p class="modal-subtitle">Raspberry Pi · Holiday Lighting Controller</p>
+<template id="tpl-volunteer-platform">
+  <p class="modal-eyebrow">Project / Full-Stack <span class="badge badge-progress">In Progress</span></p>
+  <h2>Volunteer Coordination Platform</h2>
+  <p class="modal-subtitle">React 19 · Azure Functions · Cosmos DB · Python</p>
   <div class="modal-tags">
-    <span class="spec-chip">Raspberry Pi</span>
+    <span class="spec-chip">React</span>
+    <span class="spec-chip">Azure</span>
     <span class="spec-chip">Python</span>
-    <span class="spec-chip">Home Automation</span>
+    <span class="spec-chip">Cosmos DB</span>
+    <span class="spec-chip">CI/CD</span>
   </div>
 
   <h3 class="modal-h3">Overview</h3>
   <p>
-    A Raspberry Pi-controlled holiday light display wired through three 8-channel relay boards driving
-    individual mechanical relays for each lighting circuit, mounted on a custom-built plywood control
-    panel. The show ran synced to an FM broadcast; visitors could tune their car radio to 104.5 FM to
-    hear music timed to the lights. It won <strong>"Best Use of Lights"</strong> in the neighborhood's
-    Branches Holiday Contest.
+    A full-stack volunteer coordination platform built for a corporate bootcamp program: event
+    scheduling, QR-based check-in, and volunteer coordination across a layered architecture. A React
+    frontend (with MapLibre for event maps) talks to an Azure Functions API, which sits on top of a
+    Python service layer backed by a Cosmos DB NoSQL store.
   </p>
-  <!-- TODO: add more detail here: what software sequences the show (e.g. xLights, Falcon Player),
-       how audio sync works, exact channel/prop count, and how the schedule is triggered. -->
 
-  <h3 class="modal-h3">Gallery</h3>
-  <div class="modal-gallery">
-    <figure class="gallery-item">
-      <div class="gallery-media"><img src="assets/projects/christmas-lights/wiring.jpg" alt="Relay control panel, three 8-channel relay boards wired to individual mechanical relays on plywood"></div>
-      <figcaption class="gallery-caption">Relay control panel, three 8-channel boards</figcaption>
-    </figure>
-    <figure class="gallery-item">
-      <div class="gallery-media"><img src="assets/projects/christmas-lights/award.jpg" alt="Best Use of Lights award sign, Branches Holiday Contest, tune to 104.5 FM"></div>
-      <figcaption class="gallery-caption">Best Use of Lights award, Branches Holiday Contest</figcaption>
-    </figure>
-    <figure class="gallery-item gallery-video">
-      <div class="gallery-media">
-        <iframe src="https://www.youtube.com/embed/Uxf9yMQsREI" title="Christmas Light Show" loading="lazy" allowfullscreen></iframe>
-      </div>
-      <figcaption class="gallery-caption">Light show video</figcaption>
-    </figure>
-  </div>
-</template>
-
-<template id="tpl-magic-mirror">
-  <p class="modal-eyebrow">Project / Raspberry Pi</p>
-  <h2>Magic Mirror</h2>
-  <p class="modal-subtitle">Raspberry Pi · Two-Way Mirror Display</p>
-  <div class="modal-tags">
-    <span class="spec-chip">Raspberry Pi</span>
-    <span class="spec-chip">Two-Way Mirror</span>
-  </div>
-
-  <h3 class="modal-h3">Overview</h3>
+  <h3 class="modal-h3">Architecture</h3>
   <p>
-    A smart mirror built into a stained wood frame, using two-way mirror glass mounted over a repurposed
-    monitor. A Raspberry Pi drives the display behind the glass, showing live modules like time and
-    weather. A physical toggle switch mounted on the frame controls power to the unit.
+    Frontend to API to service layer to database: the React 19 frontend calls an Azure Functions API,
+    which delegates business logic to a Python service layer, which reads and writes to Cosmos DB.
+    Deployed through two separate GitHub Actions pipelines.
   </p>
-  <!-- TODO: add more detail here: exact software/modules running the display (e.g. MagicMirror2),
-       how the frame was built, and what other modules it shows (calendar, news, etc.). -->
-
-  <h3 class="modal-h3">Gallery</h3>
-  <div class="modal-gallery">
-    <figure class="gallery-item">
-      <div class="gallery-media"><img src="assets/projects/magic-mirror/mirror-display.jpg" alt="Magic mirror live display showing time and weather forecast"></div>
-      <figcaption class="gallery-caption">Live display: time, weather forecast</figcaption>
-    </figure>
-    <figure class="gallery-item">
-      <div class="gallery-media"><img src="assets/projects/magic-mirror/mirror-internals.jpg" alt="Magic mirror internals: monitor, Raspberry Pi, and wiring inside the frame"></div>
-      <figcaption class="gallery-caption">Internals: Raspberry Pi, monitor, wiring</figcaption>
-    </figure>
-    <figure class="gallery-item">
-      <div class="gallery-media"><img src="assets/projects/magic-mirror/mirror-switch.jpg" alt="Stained wood frame corner with mounted power toggle switch and mirror glass"></div>
-      <figcaption class="gallery-caption">Frame detail with power switch</figcaption>
-    </figure>
-  </div>
 </template>
 
 <template id="tpl-theta-tau">
@@ -828,6 +808,18 @@ R_25C  = 10kΩ</pre>
   </div>
 </template>
 
+<template id="tpl-nvr">
+  <p class="modal-eyebrow">Project / Self-Hosted <span class="badge badge-progress">In Progress</span></p>
+  <h2>Self-Hosted NVR with AI Object Detection</h2>
+  <p class="modal-subtitle">Frigate · Docker · RTSP</p>
+  <div class="modal-tags">
+    <span class="spec-chip">Real-Time Inference</span>
+  </div>
+
+  <h3 class="modal-h3">Overview</h3>
+  <p>Self-hosted network video recorder integrating RTSP cameras with real-time AI object detection via Frigate, running in Docker.</p>
+</template>
+
 <template id="tpl-duckiebot">
   <p class="modal-eyebrow">Project / Robotics</p>
   <h2>Autonomous Robot Navigation</h2>
@@ -851,26 +843,73 @@ R_25C  = 10kΩ</pre>
   </div>
 </template>
 
-<template id="tpl-nvr">
-  <p class="modal-eyebrow">Project / Self-Hosted <span class="badge badge-progress">In Progress</span></p>
-  <h2>Self-Hosted NVR with AI Object Detection</h2>
-  <p class="modal-subtitle">Frigate · Docker · RTSP</p>
+<template id="tpl-christmas-lights">
+  <p class="modal-eyebrow">Project / Raspberry Pi</p>
+  <h2>Christmas Light Show</h2>
+  <p class="modal-subtitle">Raspberry Pi · Holiday Lighting Controller</p>
   <div class="modal-tags">
-    <span class="spec-chip">Real-Time Inference</span>
+    <span class="spec-chip">Raspberry Pi</span>
+    <span class="spec-chip">Python</span>
+    <span class="spec-chip">Home Automation</span>
   </div>
 
   <h3 class="modal-h3">Overview</h3>
-  <p>Self-hosted network video recorder integrating RTSP cameras with real-time AI object detection via Frigate, running in Docker.</p>
+  <p>
+    A Raspberry Pi-controlled holiday light display wired through three 8-channel relay boards driving
+    individual mechanical relays for each lighting circuit, mounted on a custom-built plywood control
+    panel. The show ran synced to an FM broadcast; visitors could tune their car radio to 104.5 FM to
+    hear music timed to the lights. It won <strong>"Best Use of Lights"</strong> in the neighborhood's
+    Branches Holiday Contest.
+  </p>
 
   <h3 class="modal-h3">Gallery</h3>
   <div class="modal-gallery">
-    <!-- TODO: replace each placeholder with a real screenshot, e.g.
-         <figure class="gallery-item">
-           <div class="gallery-media"><img src="assets/projects/nvr/dashboard.jpg" alt="Frigate dashboard"></div>
-           <figcaption class="gallery-caption">Live dashboard view</figcaption>
-         </figure> -->
     <figure class="gallery-item">
-      <div class="gallery-media"><span>Live Dashboard View</span></div>
+      <div class="gallery-media"><img src="assets/projects/christmas-lights/wiring.jpg" alt="Relay control panel, three 8-channel relay boards wired to individual mechanical relays on plywood"></div>
+      <figcaption class="gallery-caption">Relay control panel, three 8-channel boards</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <div class="gallery-media"><img src="assets/projects/christmas-lights/award.jpg" alt="Best Use of Lights award sign, Branches Holiday Contest, tune to 104.5 FM"></div>
+      <figcaption class="gallery-caption">Best Use of Lights award, Branches Holiday Contest</figcaption>
+    </figure>
+    <figure class="gallery-item gallery-video">
+      <div class="gallery-media">
+        <iframe src="https://www.youtube.com/embed/Uxf9yMQsREI" title="Christmas Light Show" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <figcaption class="gallery-caption">Light show video</figcaption>
+    </figure>
+  </div>
+</template>
+
+<template id="tpl-magic-mirror">
+  <p class="modal-eyebrow">Project / Raspberry Pi</p>
+  <h2>Magic Mirror</h2>
+  <p class="modal-subtitle">Raspberry Pi · Two-Way Mirror Display</p>
+  <div class="modal-tags">
+    <span class="spec-chip">Raspberry Pi</span>
+    <span class="spec-chip">Two-Way Mirror</span>
+  </div>
+
+  <h3 class="modal-h3">Overview</h3>
+  <p>
+    A smart mirror built into a stained wood frame, using two-way mirror glass mounted over a repurposed
+    monitor. A Raspberry Pi drives the display behind the glass, showing live modules like time and
+    weather. A physical toggle switch mounted on the frame controls power to the unit.
+  </p>
+
+  <h3 class="modal-h3">Gallery</h3>
+  <div class="modal-gallery">
+    <figure class="gallery-item">
+      <div class="gallery-media"><img src="assets/projects/magic-mirror/mirror-display.jpg" alt="Magic mirror live display showing time and weather forecast"></div>
+      <figcaption class="gallery-caption">Live display: time, weather forecast</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <div class="gallery-media"><img src="assets/projects/magic-mirror/mirror-internals.jpg" alt="Magic mirror internals: monitor, Raspberry Pi, and wiring inside the frame"></div>
+      <figcaption class="gallery-caption">Internals: Raspberry Pi, monitor, wiring</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <div class="gallery-media"><img src="assets/projects/magic-mirror/mirror-switch.jpg" alt="Stained wood frame corner with mounted power toggle switch and mirror glass"></div>
+      <figcaption class="gallery-caption">Frame detail with power switch</figcaption>
     </figure>
   </div>
 </template>
