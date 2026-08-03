@@ -1,5 +1,5 @@
 /* =========================================================
-   Jack Schmitt — Portfolio
+   Jack Schmitt Portfolio
    Dark, technical/engineering aesthetic.
    ========================================================= */
 
@@ -428,29 +428,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   box-shadow: 0 0 6px var(--accent-2);
 }
 
-/* =========================================================
-   About
-   ========================================================= */
-
 .section-lede {
   color: var(--text-dim);
   margin: -32px 0 40px;
   max-width: 56ch;
 }
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
-
-.about-copy p {
-  color: var(--text-dim);
-  max-width: 65ch;
-  margin: 0 0 18px;
-}
-.about-copy p:last-child { margin-bottom: 0; }
 
 /* =========================================================
    Timeline (Experience)
@@ -1039,6 +1021,14 @@ body.modal-open { overflow: hidden; }
 }
 
 .gallery-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+}
+
+.gallery-media {
+  position: relative;
   aspect-ratio: 4 / 3;
   background:
     repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0 2px, transparent 2px 14px),
@@ -1051,16 +1041,17 @@ body.modal-open { overflow: hidden; }
   text-align: center;
   padding: 8px;
   overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
-.gallery-item span {
+.gallery-media span {
   font-family: var(--font-mono);
   font-size: 0.66rem;
   letter-spacing: 0.04em;
   color: var(--text-faint);
 }
-.gallery-item img,
-.gallery-item video,
-.gallery-item iframe {
+.gallery-media img,
+.gallery-media video,
+.gallery-media iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1068,19 +1059,25 @@ body.modal-open { overflow: hidden; }
   border-radius: 2px;
 }
 
+.gallery-caption {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  line-height: 1.4;
+  color: var(--text-faint);
+  margin: 0;
+}
+
 .gallery-item.gallery-video {
   grid-column: 1 / -1;
+}
+.gallery-item.gallery-video .gallery-media {
   aspect-ratio: 16 / 9;
 }
 
-.gallery-item-clickable {
-  cursor: pointer;
-  position: relative;
-  outline: none;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-.gallery-item-clickable:hover,
-.gallery-item-clickable:focus-visible {
+.gallery-item-clickable { cursor: pointer; }
+.gallery-item-clickable .gallery-media { outline: none; }
+.gallery-item-clickable:hover .gallery-media,
+.gallery-item-clickable:focus-visible .gallery-media {
   transform: scale(1.03);
   border-color: var(--accent);
 }
@@ -1088,7 +1085,7 @@ body.modal-open { overflow: hidden; }
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
-.gallery-item-clickable::after {
+.gallery-media::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1102,8 +1099,8 @@ body.modal-open { overflow: hidden; }
   transition: opacity 0.2s ease;
   pointer-events: none;
 }
-.gallery-item-clickable:hover::after,
-.gallery-item-clickable:focus-visible::after {
+.gallery-item-clickable:hover .gallery-media::after,
+.gallery-item-clickable:focus-visible .gallery-media::after {
   opacity: 1;
 }
 
@@ -1193,6 +1190,21 @@ body.modal-open { overflow: hidden; }
 .lightbox-prev { left: 16px; }
 .lightbox-next { right: 16px; }
 
+.lightbox-caption {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 640px;
+  padding: 0 20px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  text-align: center;
+  margin: 0;
+}
+
 .lightbox-counter {
   position: absolute;
   bottom: 20px;
@@ -1246,8 +1258,6 @@ body.modal-open { overflow: hidden; }
   }
   .hero-aside { order: -1; }
   .photo-card { max-width: 280px; margin: 0 auto; }
-
-  .about-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
