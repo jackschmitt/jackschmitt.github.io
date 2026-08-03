@@ -102,13 +102,14 @@
     if (e.target === modalOverlay) closeModal();
   });
 
-  // Gallery lightbox — click any photo/video in a project's gallery to view
+  // Gallery lightbox: click any photo/video in a project's gallery to view
   // it larger, with prev/next to step through the rest of that gallery.
   const lightbox = document.getElementById('lightbox');
   const lightboxStage = document.getElementById('lightbox-stage');
   const lightboxClose = document.getElementById('lightbox-close');
   const lightboxPrev = document.getElementById('lightbox-prev');
   const lightboxNext = document.getElementById('lightbox-next');
+  const lightboxCaption = document.getElementById('lightbox-caption');
   const lightboxCounter = document.getElementById('lightbox-counter');
   let currentGallery = [];
   let currentIndex = 0;
@@ -120,19 +121,20 @@
     if (item.type === 'video') {
       const iframe = document.createElement('iframe');
       iframe.src = item.src;
-      iframe.title = item.label;
+      iframe.title = item.caption || 'Video';
       iframe.loading = 'lazy';
       iframe.allowFullscreen = true;
       lightboxStage.appendChild(iframe);
     } else {
       const img = document.createElement('img');
       img.src = item.src;
-      img.alt = item.label;
+      img.alt = item.alt || item.caption || '';
       lightboxStage.appendChild(img);
     }
     const multi = currentGallery.length > 1;
     lightboxPrev.style.display = multi ? '' : 'none';
     lightboxNext.style.display = multi ? '' : 'none';
+    lightboxCaption.textContent = item.caption || '';
     lightboxCounter.textContent = multi ? `${currentIndex + 1} / ${currentGallery.length}` : '';
   }
 
@@ -170,10 +172,11 @@
       items.forEach(item => {
         const img = item.querySelector('img');
         const iframe = item.querySelector('iframe');
+        const caption = item.querySelector('figcaption')?.textContent.trim() || '';
         if (img) {
-          media.push({ type: 'image', src: img.getAttribute('src'), label: img.getAttribute('alt') || '' });
+          media.push({ type: 'image', src: img.getAttribute('src'), alt: img.getAttribute('alt') || '', caption });
         } else if (iframe) {
-          media.push({ type: 'video', src: iframe.getAttribute('src'), label: iframe.getAttribute('title') || '' });
+          media.push({ type: 'video', src: iframe.getAttribute('src'), caption: caption || iframe.getAttribute('title') || '' });
         }
       });
       let mediaIndex = 0;
@@ -183,7 +186,7 @@
         item.classList.add('gallery-item-clickable');
         item.setAttribute('role', 'button');
         item.setAttribute('tabindex', '0');
-        item.setAttribute('aria-label', `View larger: ${media[index].label || 'gallery item'}`);
+        item.setAttribute('aria-label', `View larger: ${media[index].caption || 'gallery item'}`);
         item.addEventListener('click', () => openLightbox(media, index));
         item.addEventListener('keydown', (e) => {
           if (e.key === 'Enter' || e.key === ' ') {
