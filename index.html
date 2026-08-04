@@ -120,6 +120,10 @@
               <dd>May 2027</dd>
             </div>
             <div class="readout-row">
+              <dt>CREDENTIAL</dt>
+              <dd>Eagle Scout</dd>
+            </div>
+            <div class="readout-row">
               <dt>STATUS</dt>
               <dd><span class="status-dot"></span>Open to full-time roles (May 2027 start)</dd>
             </div>
@@ -179,8 +183,8 @@
             <p class="timeline-org">Golden Code Development · Atlanta, GA</p>
             <ul class="timeline-bullets">
               <li>Sole intern for a private software consultancy specializing in system development.</li>
-              <li>Automated system setup and server security using Ansible, Docker, and iptables.</li>
-              <li>Deployed internal web systems with KVM virtualization.</li>
+              <li>Automated system setup and server security using Ansible, Docker, and iptables, including firewall configuration and WireGuard/Defguard VPN deployment.</li>
+              <li>Deployed internal web systems with KVM virtualization and Docker-based website integration.</li>
             </ul>
           </div>
         </article>
@@ -209,9 +213,24 @@
             </div>
             <p class="timeline-org">Molinaroli College of Engineering &amp; Computing · Columbia, SC</p>
             <ul class="timeline-bullets">
-              <li>Shoot and edit video content for the college's recruiting and social channels.</li>
-              <li>Manage the college's social media accounts and create engaging content.</li>
-              <li>Reports to director of outreach for MCEC</li>
+              <li>Film and edit roughly 5 videos a month for the college's Instagram and Facebook channels.</li>
+              <li>Manage the college's social media accounts and create engaging content for prospective students.</li>
+              <li>Report to the Director of Outreach for MCEC.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Production Manager / A/V Tech</h3>
+              <span class="timeline-date">Sep 2023 – Mar 2025</span>
+            </div>
+            <p class="timeline-org">Russell House, University of South Carolina · Columbia, SC</p>
+            <ul class="timeline-bullets">
+              <li>Ran sound, lighting, and Tricaster video switching for roughly 3 campus events a week.</li>
+              <li>Produced livestreams for university events end to end, from camera setup to broadcast.</li>
             </ul>
           </div>
         </article>
@@ -418,6 +437,69 @@
           </div>
         </article>
 
+        <!-- PROJECT: Ambilight TV -->
+        <article class="project-card fade-in" data-modal="ambilight-tv" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Ambilight TV">
+          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+          <div class="project-body">
+            <h3 class="project-title">Ambilight TV</h3>
+            <p class="project-stack">Raspberry Pi · HyperHDR · LED Strips</p>
+            <p class="project-desc">
+              DIY ambient backlighting for a TV: a Raspberry Pi running HyperHDR captures the edges of
+              the video feed in real time and drives an LED strip behind the screen to match.
+            </p>
+            <div class="project-specs">
+              <span class="spec-chip">Raspberry Pi</span>
+              <span class="spec-chip">HyperHDR</span>
+              <span class="spec-chip">LED Strips</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-cta">View details &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Hubitat Smart Home -->
+        <article class="project-card fade-in" data-modal="hubitat-smart-home" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Hubitat Smart Home">
+          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+          <div class="project-body">
+            <h3 class="project-title">Hubitat Smart Home</h3>
+            <p class="project-stack">Hubitat Elevation · Groovy</p>
+            <p class="project-desc">
+              Local-first home automation on a Hubitat Elevation hub, with custom Groovy rules driving
+              lighting, locks, presence detection, and scenes.
+            </p>
+            <div class="project-specs">
+              <span class="spec-chip">Hubitat Elevation</span>
+              <span class="spec-chip">Groovy</span>
+              <span class="spec-chip">Home Automation</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-cta">View details &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT: Raspberry Pi Security Camera -->
+        <article class="project-card fade-in" data-modal="rpi-security-camera" tabindex="0" role="button" aria-haspopup="dialog" aria-label="View details for Raspberry Pi Security Camera">
+          <div class="project-thumb" aria-hidden="true"><span>IMG</span></div>
+          <div class="project-body">
+            <h3 class="project-title">Raspberry Pi Security Camera</h3>
+            <p class="project-stack">mediamtx · ffmpeg</p>
+            <p class="project-desc">
+              DIY porch security camera system built on a Raspberry Pi, streaming through mediamtx with
+              ffmpeg handling continuous loop recording.
+            </p>
+            <div class="project-specs">
+              <span class="spec-chip">Raspberry Pi</span>
+              <span class="spec-chip">mediamtx</span>
+              <span class="spec-chip">ffmpeg</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-cta">View details &rarr;</span>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -434,7 +516,8 @@
           <h3 class="skill-cat">Electrical</h3>
           <div class="skill-tags">
             <span>VHDL</span><span>Verilog</span><span>SystemVerilog</span><span>SPICE</span>
-            <span>LTSpice</span><span>Digital Logic</span><span>PCB Design (KiCAD)</span><span>Quartus</span>
+            <span>LTSpice</span><span>Digital Logic</span><span>PCB Design (KiCAD)</span><span>Quartus II</span>
+            <span>Mbed OS</span><span>STM32duino</span>
           </div>
         </div>
 
@@ -442,7 +525,8 @@
           <h3 class="skill-cat">Programming</h3>
           <div class="skill-tags">
             <span>C</span><span>C++</span><span>Java</span><span>Python</span><span>MATLAB</span>
-            <span>Assembly (MIPS/ARM/x86)</span><span>HTML</span><span>CSS</span><span>Bash</span>
+            <span>Assembly (MIPS/ARM/x86)</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+            <span>Bash</span><span>.NET/C#</span><span>JSON</span><span>Groovy</span>
           </div>
         </div>
 
@@ -450,14 +534,33 @@
           <h3 class="skill-cat">Systems</h3>
           <div class="skill-tags">
             <span>Linux</span><span>Docker</span><span>Ansible</span><span>KVM/QEMU</span>
-            <span>Firebase</span><span>Git</span><span>ROS</span>
+            <span>Firebase</span><span>Git</span><span>ROS</span><span>iptables</span>
+            <span>WireGuard/Defguard</span><span>Node.js</span><span>PostgreSQL</span>
+            <span>ffmpeg</span><span>mediamtx</span><span>Wireshark</span><span>WSL2</span>
           </div>
         </div>
 
         <div class="skill-card fade-in">
-          <h3 class="skill-cat">Tools</h3>
+          <h3 class="skill-cat">Cloud &amp; AI</h3>
           <div class="skill-tags">
-            <span>Copilot Studio</span><span>Power BI</span><span>Power Automate</span><span>Adobe Premiere</span>
+            <span>Copilot Studio</span><span>Power Automate</span><span>Power BI</span>
+            <span>Azure</span><span>Microsoft Office Suite</span>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <h3 class="skill-cat">Creative &amp; Media</h3>
+          <div class="skill-tags">
+            <span>Adobe Premiere</span><span>Adobe Photoshop</span><span>Adobe Creative Cloud</span>
+            <span>CapCut</span><span>Tricaster</span>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <h3 class="skill-cat">Hardware</h3>
+          <div class="skill-tags">
+            <span>Raspberry Pi</span><span>ESP32</span><span>ARM Nucleo (STM32)</span>
+            <span>Hubitat Elevation</span>
           </div>
         </div>
 
@@ -914,6 +1017,66 @@ R_25C  = 10kΩ</pre>
       <figcaption class="gallery-caption">Frame detail with power switch</figcaption>
     </figure>
   </div>
+</template>
+
+<template id="tpl-ambilight-tv">
+  <p class="modal-eyebrow">Project / Raspberry Pi</p>
+  <h2>Ambilight TV</h2>
+  <p class="modal-subtitle">Raspberry Pi · HyperHDR · LED Strips</p>
+  <div class="modal-tags">
+    <span class="spec-chip">Raspberry Pi</span>
+    <span class="spec-chip">HyperHDR</span>
+    <span class="spec-chip">LED Strips</span>
+  </div>
+
+  <h3 class="modal-h3">Overview</h3>
+  <p>
+    DIY ambient backlighting for a TV, similar to Philips Ambilight. A Raspberry Pi running HyperHDR
+    captures the color at the edges of the video feed in real time and drives an LED strip mounted
+    behind the screen to match, extending the picture's color into the room.
+  </p>
+  <!-- TODO: add more detail here: how the LED strip is mounted, capture source (HDMI splitter?
+       screen grabber?), and photos/video of it running. -->
+</template>
+
+<template id="tpl-hubitat-smart-home">
+  <p class="modal-eyebrow">Project / Home Automation</p>
+  <h2>Hubitat Smart Home</h2>
+  <p class="modal-subtitle">Hubitat Elevation · Groovy</p>
+  <div class="modal-tags">
+    <span class="spec-chip">Hubitat Elevation</span>
+    <span class="spec-chip">Groovy</span>
+    <span class="spec-chip">Home Automation</span>
+  </div>
+
+  <h3 class="modal-h3">Overview</h3>
+  <p>
+    Local-first home automation built on a Hubitat Elevation hub, chosen over cloud-dependent
+    alternatives to keep automations running even without internet access. Custom Groovy rules drive
+    lighting, smart locks, presence detection, and multi-device scenes.
+  </p>
+  <!-- TODO: add more detail here: which devices/protocols (Zigbee/Z-Wave?), specific automations or
+       scenes, and photos of the setup. -->
+</template>
+
+<template id="tpl-rpi-security-camera">
+  <p class="modal-eyebrow">Project / Raspberry Pi</p>
+  <h2>Raspberry Pi Security Camera</h2>
+  <p class="modal-subtitle">mediamtx · ffmpeg</p>
+  <div class="modal-tags">
+    <span class="spec-chip">Raspberry Pi</span>
+    <span class="spec-chip">mediamtx</span>
+    <span class="spec-chip">ffmpeg</span>
+  </div>
+
+  <h3 class="modal-h3">Overview</h3>
+  <p>
+    A DIY porch security camera system built on a Raspberry Pi. mediamtx handles the RTSP media
+    server, while ffmpeg manages continuous loop recording so footage stays available without
+    manually managing storage.
+  </p>
+  <!-- TODO: add more detail here: camera hardware used, storage/retention setup, and photos of the
+       install. -->
 </template>
 
 <script src="js/main.js"></script>
